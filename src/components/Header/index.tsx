@@ -1,16 +1,23 @@
-import iconSun from '../../assets/sun.svg'
+import iconSun from '../../assets/sun.svg';
+import iconMoon from '../../assets/moon.svg';
+import { Button, Container } from './styles';
 
+interface toggleThemeProps {
+  toggleTheme: () => void;
+  theme: string;
+}
 
-export function Header() {
-  console.log('first');
-
+export function Header({ toggleTheme, theme }: toggleThemeProps) {
   return (
-    <div>
-      <h1>Search a dev</h1>
-      <button>Light
-        <img src={iconSun} alt="Icon for change theme from light to dark or dark to light" />
-      </button>
-    </div>
-  )
-
+    <Container>
+      <h1>devsearch</h1>
+      <Button onClick={toggleTheme}>
+        {theme === 'light' ? 'Dark' : 'Light'}
+        <img
+          src={theme === 'dark' ? iconSun : iconMoon}
+          alt="Icon for change theme from light to dark or dark to light"
+        />
+      </Button>
+    </Container>
+  );
 }
