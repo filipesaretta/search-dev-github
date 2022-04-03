@@ -1,11 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
-
 export const GlobalStyles = createGlobalStyle`
 
 
-
-
+button, a {
+  cursor: pointer;
+}
 
 /*
   Josh's Custom CSS Reset
@@ -23,6 +23,10 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background: ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.text};
+  font-family: 'Source Sans Pro', sans-serif;
+  
 }
 img, picture, video, canvas, svg {
   display: block;
@@ -38,4 +42,4 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-`
+`;
