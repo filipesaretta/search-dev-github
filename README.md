@@ -8,7 +8,7 @@
 
 ## Working Project
 
-![github-search](/src/assets/github-search.gif)
+![github-search](./src/assets/github-search.gif)
 
 ## Tech
 
