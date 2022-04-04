@@ -5,11 +5,14 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: 500px;
-  margin: 2rem auto;
+  margin: 0 1rem;
+  padding-top: 2rem;
+  @media (min-width: 500px) {
+    margin: 0 auto;
+  }
   color: ${(props) => props.theme.text};
   h1 {
     font-size: 1rem;
-
     font-weight: 700;
   }
 `;
