@@ -8,7 +8,26 @@ export default defineConfig({
     react(),
     ViteFonts({
       google: {
-        families: ['Source Sans Pro'],
+        families: [
+          {
+            /**
+             * Family name (required)
+             */
+            name: 'Source+Sans+Pro',
+
+            /**
+             * Family styles
+             */
+            styles: 'wght@300;400;700;900&display=swap',
+
+            /**
+             * enable non-blocking renderer
+             *   <link rel="preload" href="xxx" as="style" onload="this.rel='stylesheet'">
+             * default: true
+             */
+            defer: true,
+          },
+        ],
       },
     }),
   ],
