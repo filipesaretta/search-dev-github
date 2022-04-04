@@ -4,6 +4,7 @@ import { GlobalStyles } from './styles/GlobalStyles';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
 import { usePersistedState } from './utils/usePersistedState';
+import { Search } from './components/Search';
 
 function App() {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark);
@@ -14,7 +15,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header toggleTheme={toggleTheme} />
+      <Header toggleTheme={toggleTheme} theme={theme.title} />
+      <Search />
       <GlobalStyles />
     </ThemeProvider>
   );
